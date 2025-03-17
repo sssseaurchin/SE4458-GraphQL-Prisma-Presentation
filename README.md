@@ -1,14 +1,12 @@
 # **SE 4458 GraphQL Prisma Presentation**
-Basic sample project to showcase the features of GraphQL and Prisma together.
+A basic sample Node.js project created to showcase GraphQL and Prisma's features.
 
-## **Tech Stack & Tools**
-
-### Development Tools:
+#### Development Tools:
 - **JetBrains WebStorm** – IDE for development
 - **Prisma Studio** – GUI to manage database (`npx prisma studio`)
 - **GraphQL Playground** – API testing interface
 
-### Backend Technologies:
+#### Backend Technologies:
 - **Node.js** – JavaScript runtime
 - **GraphQL** – Query language for APIs
 - **Apollo Server** – GraphQL server implementation
@@ -16,7 +14,7 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
 - **SQLite** – Lightweight database for local development
 - **WebSockets (`graphql-ws`)** – Real-time GraphQL subscriptions
 
-### Libraries & Dependencies:
+#### Libraries & Dependencies:
 ```json
 "dependencies": {
     "@apollo/server": "^4.11.3",
@@ -33,7 +31,7 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
   }
 ```
 
-## Project Structure
+#### Project Structure
 ```
  graphql_presentation
 │   .env
@@ -52,9 +50,9 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
 		schema.js
 		server.js
 ```
-## Data Model
+#### Data Models
 
-### **User Model**
+#### `User`
 
 | Field   | Type                  | Attributes       |
 |---------|-----------------------|-----------------|
@@ -63,7 +61,7 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
 | `email` | `String`              | `@unique`       |
 | `posts` | `Post[]`              | `Relation`      |
 
-### **Post Model**
+#### `Post`
 
 | Field      | Type       | Attributes       |
 |------------|-----------|-----------------|
