@@ -33,8 +33,6 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
   }
 ```
 
----
-
 ## Project Structure
 ```
  graphql_presentation
@@ -65,8 +63,6 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
 | `email` | `String`              | `@unique`       |
 | `posts` | `Post[]`              | `Relation`      |
 
----
-
 ### **Post Model**
 
 | Field      | Type       | Attributes       |
@@ -77,4 +73,3 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
 | `author`   | `User`     | `Relation`      |
 | `authorId` | `Integer`  | `@relation(fields: [authorId], references: [id])` |
 
----
