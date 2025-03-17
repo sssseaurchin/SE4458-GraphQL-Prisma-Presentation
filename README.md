@@ -1,10 +1,14 @@
 # **SE 4458 GraphQL Prisma Presentation**
-
 Basic sample project to showcase the features of GraphQL and Prisma together.
----
 
 ## **Tech Stack & Tools**
-### **Backend Technologies:**
+
+### Development Tools:
+- **JetBrains WebStorm** – IDE for development
+- **Prisma Studio** – GUI to manage database (`npx prisma studio`)
+- **GraphQL Playground** – API testing interface
+
+### Backend Technologies:
 - **Node.js** – JavaScript runtime
 - **GraphQL** – Query language for APIs
 - **Apollo Server** – GraphQL server implementation
@@ -12,7 +16,7 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
 - **SQLite** – Lightweight database for local development
 - **WebSockets (`graphql-ws`)** – Real-time GraphQL subscriptions
 
-### **Libraries & Dependencies:**
+### Libraries & Dependencies:
 ```json
 "dependencies": {
     "@apollo/server": "^4.11.3",
@@ -29,15 +33,9 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
   }
 ```
 
-### **Development Tools:**
-- **JetBrains WebStorm** – IDE for development
-- **Prisma Studio** – GUI to manage database (`npx prisma studio`)
-- **GraphQL Playground** – API testing interface
-- **GitHub** – Version control
-
 ---
 
-## **Project Structure**
+## Project Structure
 ```
  graphql_presentation
 │   .env
@@ -56,3 +54,27 @@ Basic sample project to showcase the features of GraphQL and Prisma together.
 		schema.js
 		server.js
 ```
+## Data Model
+
+### **User Model**
+
+| Field   | Type                  | Attributes       |
+|---------|-----------------------|-----------------|
+| `id`    | `Integer`             | `@id, @default(autoincrement())` |
+| `name`  | `String`              | `Required`      |
+| `email` | `String`              | `@unique`       |
+| `posts` | `Post[]`              | `Relation`      |
+
+---
+
+### **Post Model**
+
+| Field      | Type       | Attributes       |
+|------------|-----------|-----------------|
+| `id`       | `Integer`  | `@id, @default(autoincrement())` |
+| `title`    | `String`   | `Required`      |
+| `content`  | `String`   | `Required`      |
+| `author`   | `User`     | `Relation`      |
+| `authorId` | `Integer`  | `@relation(fields: [authorId], references: [id])` |
+
+---
