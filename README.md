@@ -46,9 +46,9 @@ A basic sample Node.js project created to showcase GraphQL and Prisma's features
 │   │   schema.prisma
 │   └───migrations ...
 └───src
-		resolvers.js
-		schema.js
-		server.js
+	resolvers.js
+	schema.js
+	server.js
 ```
 #### Data Models
 
